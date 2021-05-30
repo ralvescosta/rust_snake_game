@@ -3,6 +3,7 @@ extern crate rand;
 
 mod draw;
 mod game;
+mod snake;
 
 use piston_window::types::Color;
 use piston_window::*;
@@ -27,12 +28,13 @@ fn main() {
             println!("{:?}", key);
             game.key_pressed(key);
         }
-
         window.draw_2d(&event, |ctx, g, _| {
             clear(BACK_COLOR, g);
             game.draw(&ctx, g);
         });
 
-        event.update(|arg| {});
+        event.update(|arg| {
+            game.update(arg.dt);
+        });
     }
 }
