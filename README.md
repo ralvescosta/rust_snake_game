@@ -16,6 +16,9 @@ cargo update
 cargo run
 ```
 
+### The original Game
+
+<img src="./docs/original.png" width="20%" height="20%"/>
 
 
 
